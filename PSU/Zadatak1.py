@@ -72,3 +72,80 @@
 
 
 # print("Srednja vrijednost pouzdanosti je : ", sum/spam_counter)
+
+#Zadatak4
+# spam_counter = 0
+# sum = 0.0
+
+# unos = input("unesite ime tekstualne datoteke \n")
+# datoteka = 'C:\\Users\\student\\Desktop\\'+unos+'.txt'
+# try:
+#   dat = open(datoteka, 'r')
+# except:
+#     print("Datoteka ne postoji")
+
+# for line in dat:
+#    line = line.split()
+#    if("X-DSPAM-Confidence:" in line):
+#       spam_counter += 1
+#       sum += float(line[1])
+
+
+# print("Srednja vrijednost pouzdanosti je : ", sum/spam_counter)
+
+#Zadatak5
+#rijecnik = {}
+# brojac = 0
+# try:
+#  dat = open("C:\\Users\\student\\Desktop\\song.txt", 'r')
+
+
+# except:
+#     print("datoteka ne postoji")
+
+# for line in dat:
+#    line = line.split()
+#    for rijec in line:
+#       if rijec in rijecnik:
+#          rijecnik[rijec] += 1
+#       else:
+#          rijecnik[rijec] = 1
+
+# unikatne_rijeci = []
+
+# for rijeci in rijecnik:
+#    if rijecnik[rijeci] == 1:
+#       unikatne_rijeci.append(rijeci)
+#       brojac += 1
+
+
+# print(rijecnik)
+# print("Broj unikatnih rijeci: ", brojac)
+# print(unikatne_rijeci)
+
+#Zadatak6
+# spam_sum = 0
+# ham_sum = 0
+# spam_counter = 0
+# ham_counter = 0
+# usklicnici_counter = 0
+# try:
+#  dat = open("C:\\Users\\student\\Desktop\\SMSSpamCollection.txt", 'r')
+
+# except:
+#     print("Datoteka ne postoji")
+
+# for line in dat:
+#    line = line.split()
+#    if(line[0] == "ham"):
+#       ham_counter += 1
+#       ham_sum += len(line)
+#    elif(line[0] == "spam"):
+#       spam_counter += 1
+#       spam_sum += len(line)
+#       if("!" in line[-1]):
+#          usklicnici_counter += 1
+
+# print("prosjecan broj rijeci u sms porukama tipa ham: ", ham_sum/ham_counter)
+# print("prosjecan broj rijeci u sms porukama tipa spam: ", spam_sum/spam_counter)
+# print("broj sms poruka spam koje završavaju sa !", usklicnici_counter)
